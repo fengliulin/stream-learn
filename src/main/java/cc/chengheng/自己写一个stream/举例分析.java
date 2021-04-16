@@ -13,9 +13,9 @@ public class 举例分析 {
 //                .reduce(0, (i1, i2) -> i1 + i2);
 
         MyStream<Integer> integerStream = IntegerStreamGenerator.getIntegerStream(1, 10);
-        MyStream<Integer> filter = integerStream.filter(item -> item % 2 == 0);
+//        MyStream<Integer> filter = integerStream.filter(item -> item % 2 == 0);
         MyStream<Integer> map = integerStream.map(item -> item * item);
-        MyStream<Integer> limit = map.limit(2);
+//        MyStream<Integer> limit = map.limit(2);
 
         map.forEach(System.out::println);
 
