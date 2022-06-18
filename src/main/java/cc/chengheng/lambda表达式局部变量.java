@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 @FunctionalInterface
 interface LoadBalancerRequest {
-    String apply();
+    Integer[] apply();
 }
 
 class abc {
@@ -19,7 +19,7 @@ class abc {
             System.out.println(this.aLong);
             System.out.println(this);
             System.out.println(aLong);
-            return request;
+            return execution;
         };
     }
 }
@@ -27,6 +27,8 @@ class abc {
 public class lambda表达式局部变量 {
     public static void main(String[] args) {
         LoadBalancerRequest request = new abc().createRequest("第一个参数request", "第二个参数字节".getBytes(StandardCharsets.UTF_8), new Integer[]{1, 2, 3});
-        request.apply();
+        Integer[] apply = request.apply();
+
+        System.out.println();
     }
 }
