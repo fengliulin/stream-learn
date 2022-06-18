@@ -17,6 +17,7 @@ class abc {
             Arrays.stream(execution).forEach(System.out::println);
             aLong = 9500L;
             System.out.println(this.aLong);
+            System.out.println(this);
             System.out.println(aLong);
             return request;
         };
