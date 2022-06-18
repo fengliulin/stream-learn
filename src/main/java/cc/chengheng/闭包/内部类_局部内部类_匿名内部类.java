@@ -7,6 +7,7 @@ class Food {
     public static final String name = "Food";
     private int num = 20;
 
+
     public Food() {
         System.out.println("美味的食物");
     }
@@ -38,12 +39,16 @@ class Food {
      */
     public Active getEat局部内部类() {
         class EatActive implements Active {
+
+            private int num= 2;
             @Override
             public void eat() {
                 if (num == 0) {
                     System.out.println("吃货，已经吃没了");
                 }
                 num--;
+
+                System.out.println(Food.this.num);
                 System.out.println("吃货，你吃了一份了");
             }
         }
